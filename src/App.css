@@ -1,0 +1,140 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to bottom right, #030b27, #300b1f);
+    color: rgb(181, 96, 250);
+    font-family: Poppins;
+}
+
+header {
+    display: flex;
+    color: rgb(255, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+}
+
+.title {
+    font-size: 30px; /* Increased font size */
+    font-weight: bold;
+    text-transform: uppercase; /* Converted to uppercase */
+    letter-spacing: 4px; /* Added letter spacing */
+    animation: fadeIn 4s ease; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container, header {
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 5s;
+}
+
+input {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.8s;
+}
+
+input:focus {
+    border-radius: 20px;
+}
+
+.container {
+    margin-top: 5px;
+    padding: 15px;
+    background-color: #0F1014;
+    border-radius: 10px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.movie-card {
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    background-color: rgb(122, 247, 106);
+    color: #ff8d22;
+    transition: 0.4s;
+}
+
+.movie-cover {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.no-image {
+    width: 238.75px;
+    height: 358.133px;
+    display: flex;
+    justify-content: center;
+    background-color: #141518;
+    border-radius: 10px;
+}
+
+.info {
+    font-size: 20px;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    padding-bottom: 20px;
+    transition: 4s;
+    animation: slideIn 4s ease;
+}
+
+.info-content {
+    max-width: 70%;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 4s;
+    align-content: end;
+    animation: slideIn 4s ease; /* Slide in animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50px;
+    }
+    .container, .info-content, header {
+        grid-template-columns: 1fr;
+        min-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .info {
+        min-height: 200px;
+    }
+}
