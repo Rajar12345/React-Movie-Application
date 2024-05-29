@@ -8,7 +8,7 @@ function App() {
 
   const API_URL = "https://api.themoviedb.org/3";
   const BACKGROUND_IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
-  const API_KEY = "164db106f577d2da6ec7abe50d42ed00";
+  const API_KEY = "YOUR_API_KEY";
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState({});
   const [searchKey, setSearchKey] = useState("");
